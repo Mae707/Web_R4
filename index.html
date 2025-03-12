@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mae's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <h1>Welcome to My Portfolio</h1>
         <p>Lourdes Mae C. Enjambre | IT Student</p>
         <nav>
@@ -18,29 +20,64 @@
             </ul>
         </nav>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a IT student, currently learning more about web developing</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class ="portfolio-item">
-            <h3>Project One</h3>
-            <p>"*Please use imagination lang sa.*"</p>
-        </div>
-        <div>
-            <h3>Project Two</h3>
-            <p>"*Please use your wild imagination lang sa gyud.*"</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project Three</h3>
-            <p>"*This time, please use your wildest imagination.*"</p>
-        </div>
-    </section>
-    <section id="contacts">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out at <a href="mailto:not@reallymyemail.com">not@reallymyemail.com</a>/a>.</p>
-    </section>
+
+    <main class="main-content">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <!-- Profile Card -->
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="profile-card">
+                    <img src="images/profile_picture.jpg" alt="Profile Picture" class="profile-pic">
+                    <h2>Lourdes Mae Enjambre</h2>
+                    <p><i class="fas fa-pencil-alt"></i>IT Student</p>
+                    <p><i class="fas fa-school"></i> USTP</p>
+                    <p><i class="fas fa-birthday-cake"></i> Jan. 28, 2005</p>
+                </div>
+            </section>
+
+            <!-- Interests Section -->
+            <section class="interests">
+                <h3>Interests</h3>
+                <div class="tags">
+                    <span>News</span> <span>Sports</span> <span>Games</span>
+                    <span>Friends</span> <span>Desserts</span> <span>Books</span> <span>Food</span>
+                    <span>Design</span> <span>Art</span> <span>Photos</span>
+                </div>
+            </section>
+        </aside>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="gallery-item"><img src="img1.jpg" alt="Image 1"></div>
+            <div class="gallery-item"><img src="img2.jpg" alt="Image 2"></div>
+            <div class="gallery-item"><img src="img3.jpg" alt="Image 3"></div>
+            <div class="gallery-item"><img src="img4.jpg" alt="Image 4"></div>
+            <div class="gallery-item"><img src="img5.jpg" alt="Image 5"></div>
+            <div class="gallery-item"><img src="img6.jpg" alt="Image 6"></div>
+        </section>
+    </main>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class ="portfolio-item">
+                <h3>Project One</h3>
+                <p>"*Please use imagination lang sa.*"</p>
+            </div>
+            <div>
+                <h3>Project Two</h3>
+                <p>"*Please use your wild imagination lang sa gyud.*"</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project Three</h3>
+                <p>"*This time, please use your wildest imagination.*"</p>
+            </div>
+        </section>
+        <section id="contacts">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out at <a href="mailto:not@reallymyemail.com">not@reallymyemail.com</a>/a>.</p>
+        </section>
+    
     <footer>
         <p>&copy; 2025 Mae's Portfolio</p>
     </footer>
