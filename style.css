@@ -41,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: rgb(150, 4, 108);
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s;
@@ -63,7 +63,7 @@ nav ul li a:hover {
   width: 250px;
   padding: 10px;
   background-color: #111;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px #540142;
   overflow-y: auto;
 }
 
@@ -71,7 +71,7 @@ nav ul li a:hover {
   background: #222;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #540142;
   text-align: center;
 }
 
@@ -89,6 +89,7 @@ nav ul li a:hover {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+  box-shadow: 0px 2px 5px #540142;
 }
 
 .profile-card p {
@@ -103,13 +104,13 @@ nav ul li a:hover {
   background: #222;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px #540142;
   margin-top: 20px;
 }
 
 .tags span {
   display: inline-block;
-  background: #78909c;
+  background: #540142;
   color: #FFEAD2;
   font-size: 12px;
   padding: 5px 10px;
@@ -134,6 +135,7 @@ nav ul li a:hover {
   height: auto;
   border-radius: 5px;
   transition: 0.3s;
+  box-shadow: 0 2px 4px #540142;
 }
 
 .gallery-item img:hover {
@@ -153,7 +155,43 @@ nav ul li a:hover {
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #540142;
+}
+
+.video-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #540142;
+}
+
+.video {
+  display: block;
+  border-radius: 10px;
+}
+
+/* Fixed-Size Small Gallery Styles */
+.fixed-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 10px; /* 10px gap between rows and columns */
+  margin-top: 15px;
+}
+
+.fixed-gallery img {
+  width: 100%; /* Make images fill their grid cells */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px #420148; /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fixed-gallery img:hover {
+  object-fit: contain; /* Reveals the whole image without cropping */
+  height: auto; /* Allows the image to expand to its full height */
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px #540142; /* Enhanced shadow on hover */
 }
 
 /* Contact Section */
@@ -226,6 +264,27 @@ nav ul li a:hover {
 .footer-bottom p {
   margin: 0;
   font-size: 14px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .fixed-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+  }
+
+  .fixed-gallery img {
+    height: 150px; /* Reduce image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust for mobile screens */
+  }
+
+  .fixed-gallery img {
+    height: 120px; /* Further reduce image height for mobile screens */
+  }
 }
 
 /* Responsive Design */
