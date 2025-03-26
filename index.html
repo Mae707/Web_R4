@@ -37,6 +37,15 @@
                 </div>
             </section>
 
+            <!-- Skills Section -->
+            <section class="Skills">
+                <h3>Skills</h3>
+                <div class="tags">
+                    <span>Html</span> <span>Css</span> <span>Drawing</span> <span>Photography</span>
+                    <span>Video Editing</span>
+                </div>
+            </section>
+
             <!-- Interests Section -->
             <section class="interests">
                 <h3>Interests</h3>
@@ -90,20 +99,77 @@
     </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Footer Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="footer-section">
-            <h4>Connect</h4>
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Malanang, Opol, Misamis Oriental, Philippines</a>
+                <a href="#"><i class="fas fa-phone"></i> 09066621409</a>
+                <a href="https://mail.google.com/" target="_blank"><i class="fas fa-envelope"></i> maeenjambre707@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p class="newsletter-text">Feel free to reach out!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input">
+                    <button type="submit" class="newsletter-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-        <p>If you'd like to get in touch, feel free to reach out at <a href="mailto:maeenjambre707@gmail.com">maeenjambre707@gmail.com</a>.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Mae's Portfolio</p>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mae. All rights reserved.</p>
+        </div>
     </footer>
+
+    <div class="cursor-sparkle" id="cursorSparkle"></div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const cursor = document.getElementById('cursorSparkle');
+            cursor.style.left = (e.pageX - 10) + 'px';
+            cursor.style.top = (e.pageY - 10) + 'px';
+            
+            // Create additional sparkles
+            for (let i = 0; i < 3; i++) {
+                createSparkle(e.pageX, e.pageY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            // Random position near cursor
+            const offsetX = (Math.random() - 0.5) * 30;
+            const offsetY = (Math.random() - 0.5) * 30;
+            
+            sparkle.style.left = (x + offsetX) + 'px';
+            sparkle.style.top = (y + offsetY) + 'px';
+            
+            // Random size and animation delay
+            const size = Math.random() * 4 + 2;
+            sparkle.style.width = size + 'px';
+            sparkle.style.height = size + 'px';
+            sparkle.style.animationDelay = Math.random() * 0.5 + 's';
+            
+            document.body.appendChild(sparkle);
+            
+            // Remove sparkle after animation
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
